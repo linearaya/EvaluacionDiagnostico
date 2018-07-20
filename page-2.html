@@ -12,12 +12,60 @@
   <!--script P5.JS-->
   <script>
   function setup(){
-    var w = windowWidth-10, h = 380;
+    var w = windowWidth, h = 400;
+      var song;
     var canvas = createCanvas(w,h);
+      noStroke();
+      smooth();
   }
-  function draw(){
-    background(200);
-  }    
+    function draw(){
+    background(190,220,220);
+      
+      fill(90,100,100);
+      textAlign(CENTER);
+      textSize(28);
+      text("Clasificación de las especies en su estado de conservación",((windowWidth/2)*1),50);
+      
+      
+      fill(119,163,53);
+      ellipse((windowWidth/7)*1,200,5,5);
+      textAlign(CENTER);
+      textSize(15);
+      text("Fuera de Peligro",((windowWidth/7)*1),300);
+      text("1",((windowWidth/7)*1),320);
+      
+      fill(196,181,42);
+      ellipse((windowWidth/7)*2,200,5,5);
+      textAlign(CENTER);
+      text("Preocupación menor (LC)",((windowWidth/7)*2),300);
+      text("1",((windowWidth/7)*2),320);
+      
+      fill(237,183,63);
+      ellipse((windowWidth/7)*3,200,5*19,5*19);
+      textAlign(CENTER);
+      text("Vulnerable (VU)",((windowWidth/7)*3),300);
+      text("19",((windowWidth/7)*3),320);
+      
+      fill(214,188,46);
+      ellipse((windowWidth/7)*4,200,5*3,5*3);
+      textAlign(CENTER);
+      text("Rara",((windowWidth/7)*4),300);
+      text("3",((windowWidth/7)*4),320);
+      
+      fill(171,56,38);
+      ellipse((windowWidth/7)*5,200,5*22,5*22);
+      textAlign(CENTER);
+      text("En Peligro (EN)",((windowWidth/7)*5),300);
+      text("22",((windowWidth/7)*5),320);
+      
+      fill(163,32,32);
+      ellipse((windowWidth/7)*6,200,5*2,5*2);
+      textAlign(CENTER);
+      text("En peligro crítico (CR)",((windowWidth/7)*6),300);
+      text("2",((windowWidth/7)*6),320);
+      
+  }
+
   </script>
   </body>
 </html>
