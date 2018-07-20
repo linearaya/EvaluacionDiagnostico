@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>Primera</title>
+  </head>
+  <body>
+  <!--Bibliotecas P5.JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+  <!--script P5.JS-->
+  <script>
+      var song;
+function preload() {    
+      soundFormats('mp3', 'ogg');
+      song = loadSound('https://github.com/linearaya/Canciondeaves/blob/master/ElcantodelasavesenChile.mp3');
+}
+  function setup(){
+    //var bg
+    var w = windowWidth, h = 400;
+    var canvas = createCanvas(w,h);
+      //bg = loadImage("img/Blanquillo3.jpg");
+      noStroke();
+      smooth();
+
+  }
+  function draw(){
+    background(190,220,220);
+      song.play();
+      
+      fill(90,100,100);
+      textAlign(CENTER);
+      textSize(28);
+      text("Clasificación de las especies en su estado de conservación",((windowWidth/2)*1),50);
+      
+      
+      fill(119,163,53);
+      ellipse((windowWidth/7)*1,200,5,5);
+      textAlign(CENTER);
+      textSize(15);
+      text("Fuera de Peligro",((windowWidth/7)*1),300);
+      text("1",((windowWidth/7)*1),320);
+      
+      fill(196,181,42);
+      ellipse((windowWidth/7)*2,200,5,5);
+      textAlign(CENTER);
+      text("Preocupación menor (LC)",((windowWidth/7)*2),300);
+      text("1",((windowWidth/7)*2),320);
+      
+      fill(237,183,63);
+      ellipse((windowWidth/7)*3,200,5*19,5*19);
+      textAlign(CENTER);
+      text("Vulnerable (VU)",((windowWidth/7)*3),300);
+      text("19",((windowWidth/7)*3),320);
+      
+      fill(214,188,46);
+      ellipse((windowWidth/7)*4,200,5*3,5*3);
+      textAlign(CENTER);
+      text("Rara",((windowWidth/7)*4),300);
+      text("3",((windowWidth/7)*4),320);
+      
+      fill(171,56,38);
+      ellipse((windowWidth/7)*5,200,5*22,5*22);
+      textAlign(CENTER);
+      text("En Peligro (EN)",((windowWidth/7)*5),300);
+      text("22",((windowWidth/7)*5),320);
+      
+      fill(163,32,32);
+      ellipse((windowWidth/7)*6,200,5*2,5*2);
+      textAlign(CENTER);
+      text("En peligro crítico (CR)",((windowWidth/7)*6),300);
+      text("2",((windowWidth/7)*6),320);
+      
+    
+      /*fill(0,255,255);
+      ellipse(mouseX,mouseY,16,16);*/
+  }    
+      
+      function mousePressed() {
+  if ( song.isPlaying() ) { // .isPlaying() retorna una variable booleana
+    song.pause();
+  } else {
+    song.play(); // la reproducción continuará desde el instante en que fue pausado.
+  }
+}
+  </script>
+  </body>
+</html>
